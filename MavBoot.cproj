@@ -1,0 +1,1364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.2</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC32.C</ToolchainName>
+    <ProjectGuid>{dd31e21f-6ef1-4516-87d7-8ffb38db911d}</ProjectGuid>
+    <avrdevice>at32uc3c1512c</avrdevice>
+    <avrdeviceseries>uc3c</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>MavBoot</AssemblyName>
+    <Name>MavBoot</Name>
+    <RootNamespace>MavBoot</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>false</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>1</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data>
+        <options>
+          <option id="avr32.drivers.canif" value="Add" config="" content-id="Atmel.ASF" />
+          <option id="avr32.drivers.cpu" value="Add" config="" content-id="Atmel.ASF" />
+          <option id="avr32.drivers.flashc" value="Add" config="" content-id="Atmel.ASF" />
+          <option id="avr32.drivers.gpio" value="Add" config="" content-id="Atmel.ASF" />
+          <option id="avr32.drivers.intc" value="Add" config="" content-id="Atmel.ASF" />
+          <option id="avr32.drivers.pm" value="Add" config="" content-id="Atmel.ASF" />
+          <option id="avr32.drivers.scif" value="Add" config="" content-id="Atmel.ASF" />
+          <option id="avr32.drivers.usart" value="Add" config="" content-id="Atmel.ASF" />
+          <option id="common.boards" value="Add" config="" content-id="Atmel.ASF" />
+          <option id="common.services.basic.clock" value="Add" config="" content-id="Atmel.ASF" />
+          <option id="common.services.delay" value="Add" config="" content-id="Atmel.ASF" />
+          <option id="common.services.usb.class.device" value="Add" config="cdc" content-id="Atmel.ASF" />
+          <option id="common.utils.interrupt" value="Add" config="" content-id="Atmel.ASF" />
+          <option id="avr32.drivers.ast" value="Add" config="" content-id="Atmel.ASF" />
+        </options>
+        <configurations>
+          <configuration key="config.avr32.utils.trampoline" value="yes" default="yes" content-id="Atmel.ASF" />
+          <configuration key="config.avr32.utils.gccstartup" value="yes" default="yes" content-id="Atmel.ASF" />
+          <configuration key="config.utils.interrupt.intc" value="yes" default="yes" content-id="Atmel.ASF" />
+          <configuration key="config.avr32.drivers.intc.exception" value="yes" default="yes" content-id="Atmel.ASF" />
+          <configuration key="config.avr32.drivers.usbc.device.sleepmgr" value="with_sleepmgr" default="with_sleepmgr" content-id="Atmel.ASF" />
+        </configurations>
+        <files>
+          <file path="src/ASF/avr32/drivers/intc/exception.S" framework="" version="" source="avr32/drivers/intc/exception.S" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/drivers/intc/intc.c" framework="" version="" source="avr32/drivers/intc/intc.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/drivers/intc/intc.h" framework="" version="" source="avr32/drivers/intc/intc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/utils/compiler.h" framework="" version="" source="avr32/utils/compiler.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/utils/header_files/uc3d_defines_fix.h" framework="" version="" source="avr32/utils/header_files/uc3d_defines_fix.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/utils/header_files/uc3l3_l4_defines_fix.h" framework="" version="" source="avr32/utils/header_files/uc3l3_l4_defines_fix.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/utils/make/Makefile.avr32.in" framework="" version="" source="avr32/utils/make/Makefile.avr32.in" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/utils/make/Makefile.avr32program.in" framework="" version="" source="avr32/utils/make/Makefile.avr32program.in" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/utils/make/Makefile.batchisp.in" framework="" version="" source="avr32/utils/make/Makefile.batchisp.in" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/utils/preprocessor/mrepeat.h" framework="" version="" source="avr32/utils/preprocessor/mrepeat.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/utils/preprocessor/preprocessor.h" framework="" version="" source="avr32/utils/preprocessor/preprocessor.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/utils/preprocessor/stringz.h" framework="" version="" source="avr32/utils/preprocessor/stringz.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/utils/preprocessor/tpaste.h" framework="" version="" source="avr32/utils/preprocessor/tpaste.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/utils/startup/startup_uc3.S" framework="" version="" source="avr32/utils/startup/startup_uc3.S" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/utils/startup/trampoline_uc3.S" framework="" version="" source="avr32/utils/startup/trampoline_uc3.S" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/utils/startup/trampoline_uc3.h" framework="" version="" source="avr32/utils/startup/trampoline_uc3.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/utils/status_codes.h" framework="" version="" source="avr32/utils/status_codes.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/main.c" framework="" version="" source="common/applications/user_application/main.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/config/conf_board.h" framework="" version="" source="common/applications/user_application/user_board/config/conf_board.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/boards/board.h" framework="" version="" source="common/boards/board.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/boards/user_board/init.c" framework="" version="" source="common/boards/user_board/init.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/boards/user_board/user_board.h" framework="" version="" source="common/boards/user_board/user_board.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/utils/interrupt.h" framework="" version="" source="common/utils/interrupt.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/utils/interrupt/interrupt_avr32.h" framework="" version="" source="common/utils/interrupt/interrupt_avr32.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/utils/parts.h" framework="" version="" source="common/utils/parts.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/drivers/canif/canif.c" framework="" version="3.19.0" source="avr32\drivers\canif\canif.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/drivers/canif/canif.h" framework="" version="3.19.0" source="avr32\drivers\canif\canif.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/Config/conf_can.h" framework="" version="3.19.0" source="avr32\drivers\canif\module_config\conf_can.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/drivers/usart/usart.c" framework="" version="3.19.0" source="avr32\drivers\usart\usart.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/drivers/usart/usart.h" framework="" version="3.19.0" source="avr32\drivers\usart\usart.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/drivers/flashc/flashc.c" framework="" version="3.19.0" source="avr32\drivers\flashc\flashc.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/drivers/flashc/flashc.h" framework="" version="3.19.0" source="avr32\drivers\flashc\flashc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/clock/uc3c/pll.c" framework="" version="3.19.0" source="common\services\clock\uc3c\pll.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/clock/uc3c/sysclk.c" framework="" version="3.19.0" source="common\services\clock\uc3c\sysclk.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/clock/uc3c/osc.c" framework="" version="3.19.0" source="common\services\clock\uc3c\osc.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/clock/uc3c/pll.h" framework="" version="3.19.0" source="common\services\clock\uc3c\pll.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/clock/genclk.h" framework="" version="3.19.0" source="common\services\clock\genclk.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/clock/osc.h" framework="" version="3.19.0" source="common\services\clock\osc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/clock/uc3c/genclk.h" framework="" version="3.19.0" source="common\services\clock\uc3c\genclk.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/clock/uc3c/osc.h" framework="" version="3.19.0" source="common\services\clock\uc3c\osc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/clock/uc3c/sysclk.h" framework="" version="3.19.0" source="common\services\clock\uc3c\sysclk.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/clock/sysclk.h" framework="" version="3.19.0" source="common\services\clock\sysclk.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/clock/pll.h" framework="" version="3.19.0" source="common\services\clock\pll.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/Config/conf_clock.h" framework="" version="3.19.0" source="common\services\clock\uc3c\module_config\conf_clock.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/drivers/cpu/avr32_reset_cause.h" framework="" version="3.19.0" source="avr32\drivers\cpu\avr32_reset_cause.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/drivers/gpio/gpio.c" framework="" version="3.19.0" source="avr32\drivers\gpio\gpio.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/drivers/gpio/gpio.h" framework="" version="3.19.0" source="avr32\drivers\gpio\gpio.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/drivers/scif/scif_uc3c.c" framework="" version="3.19.0" source="avr32\drivers\scif\scif_uc3c.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/drivers/scif/scif_uc3c.h" framework="" version="3.19.0" source="avr32\drivers\scif\scif_uc3c.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/drivers/cpu/cycle_counter/cycle_counter.h" framework="" version="3.19.0" source="avr32\drivers\cpu\cycle_counter\cycle_counter.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/delay/delay.h" framework="" version="3.19.0" source="common\services\delay\delay.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/drivers/pm/pm_uc3c.c" framework="" version="3.19.0" source="avr32\drivers\pm\pm_uc3c.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/drivers/pm/power_clocks_lib.c" framework="" version="3.19.0" source="avr32\drivers\pm\power_clocks_lib.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/drivers/pm/power_clocks_lib.h" framework="" version="3.19.0" source="avr32\drivers\pm\power_clocks_lib.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/drivers/pm/pm_uc3c.h" framework="" version="3.19.0" source="avr32\drivers\pm\pm_uc3c.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/drivers/pm/sleep.h" framework="" version="3.19.0" source="avr32\drivers\pm\sleep.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/drivers/usbc/usbc_device.c" framework="" version="3.19.0" source="avr32\drivers\usbc\usbc_device.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/drivers/usbc/usbc_device.h" framework="" version="3.19.0" source="avr32\drivers\usbc\usbc_device.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/drivers/usbc/usbc_otg.h" framework="" version="3.19.0" source="avr32\drivers\usbc\usbc_otg.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/sleepmgr/uc3/sleepmgr.c" framework="" version="3.19.0" source="common\services\sleepmgr\uc3\sleepmgr.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/sleepmgr/sleepmgr.h" framework="" version="3.19.0" source="common\services\sleepmgr\sleepmgr.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/sleepmgr/uc3/sleepmgr.h" framework="" version="3.19.0" source="common\services\sleepmgr\uc3\sleepmgr.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/Config/conf_sleepmgr.h" framework="" version="3.19.0" source="common\services\sleepmgr\uc3\module_config\conf_sleepmgr.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/usb/usb_atmel.h" framework="" version="3.19.0" source="common\services\usb\usb_atmel.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/usb/usb_protocol.h" framework="" version="3.19.0" source="common\services\usb\usb_protocol.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/usb/class/cdc/usb_protocol_cdc.h" framework="" version="3.19.0" source="common\services\usb\class\cdc\usb_protocol_cdc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/usb/class/cdc/device/udi_cdc.c" framework="" version="3.19.0" source="common\services\usb\class\cdc\device\udi_cdc.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.c" framework="" version="3.19.0" source="common\services\usb\class\cdc\device\udi_cdc_desc.c" changed="False" content-id="Atmel.ASF" />
+          <file path="atmel_devices_cdc.cat" framework="" version="3.19.0" source="common\services\usb\class\cdc\device\atmel_devices_cdc.cat" changed="False" content-id="Atmel.ASF" />
+          <file path="atmel_devices_cdc.inf" framework="" version="3.19.0" source="common\services\usb\class\cdc\device\atmel_devices_cdc.inf" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/usb/class/cdc/device/udi_cdc.h" framework="" version="3.19.0" source="common\services\usb\class\cdc\device\udi_cdc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/usb/class/cdc/device/udi_cdc_conf.h" framework="" version="3.19.0" source="common\services\usb\class\cdc\device\udi_cdc_conf.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/Config/conf_usb.h" framework="" version="3.19.0" source="common\services\usb\class\cdc\device\module_config\conf_usb.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/usb/udc/udc.c" framework="" version="3.19.0" source="common\services\usb\udc\udc.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/usb/udc/udc.h" framework="" version="3.19.0" source="common\services\usb\udc\udc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/usb/udc/udd.h" framework="" version="3.19.0" source="common\services\usb\udc\udd.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/usb/udc/udc_desc.h" framework="" version="3.19.0" source="common\services\usb\udc\udc_desc.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/common/services/usb/udc/udi.h" framework="" version="3.19.0" source="common\services\usb\udc\udi.h" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/drivers/ast/ast.c" framework="" version="3.6.0" source="avr32\drivers\ast\ast.c" changed="False" content-id="Atmel.ASF" />
+          <file path="src/ASF/avr32/drivers/ast/ast.h" framework="" version="3.6.0" source="avr32\drivers\ast\ast.h" changed="False" content-id="Atmel.ASF" />
+        </files>
+        <documentation help="http://asf.atmel.com/docs/3.19.0/common.applications.user_application.user_board.uc3c/html/index.html" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.6.0" />
+        </dependencies>
+        <project id="common.applications.user_application.user_board.uc3c" value="Add" config="" content-id="Atmel.ASF" />
+        <board id="board.user_board.uc3c" value="Add" config="" content-id="Atmel.ASF" />
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.jtagice3plus</avrtool>
+    <com_atmel_avrdbg_tool_jtagice3plus>
+      <ToolOptions>
+        <InterfaceProperties>
+          <JtagEnableExtResetOnStartSession>false</JtagEnableExtResetOnStartSession>
+          <JtagInChain>false</JtagInChain>
+          <JtagDevicesBefore>0</JtagDevicesBefore>
+          <JtagDevicesAfter>1</JtagDevicesAfter>
+          <JtagInstrBitsBefore>0</JtagInstrBitsBefore>
+          <JtagInstrBitsAfter>5</JtagInstrBitsAfter>
+          <JtagSelectedDeviceIndexInChain>
+          </JtagSelectedDeviceIndexInChain>
+          <JtagDbgClock>5200000</JtagDbgClock>
+          <JtagDaisyChainDevices>
+          </JtagDaisyChainDevices>
+        </InterfaceProperties>
+        <InterfaceName>JTAG</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.jtagice3plus</ToolType>
+      <ToolNumber>J30200008882</ToolNumber>
+      <ToolName>JTAGICE3</ToolName>
+    </com_atmel_avrdbg_tool_jtagice3plus>
+    <avrtoolinterface>JTAG</avrtoolinterface>
+    <com_atmel_avrdbg_tool_jtagicemk3>
+      <ToolOptions>
+        <InterfaceProperties>
+        </InterfaceProperties>
+        <InterfaceName>JTAG</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.jtagicemk3</ToolType>
+      <ToolNumber>J30200033964</ToolNumber>
+      <ToolName>JTAGICE3</ToolName>
+    </com_atmel_avrdbg_tool_jtagicemk3>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <Avr32Gcc>
+        <avr32gcc.common.outputfiles.hex>True</avr32gcc.common.outputfiles.hex>
+        <avr32gcc.common.outputfiles.lss>True</avr32gcc.common.outputfiles.lss>
+        <avr32gcc.common.outputfiles.eep>True</avr32gcc.common.outputfiles.eep>
+        <avr32gcc.common.outputfiles.srec>True</avr32gcc.common.outputfiles.srec>
+        <avr32gcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+            <Value>BOARD=USER_BOARD</Value>
+            <Value>UDD_ENABLE</Value>
+          </ListValues>
+        </avr32gcc.compiler.symbols.DefSymbols>
+        <avr32gcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>../common/applications/user_application/user_board/config</Value>
+            <Value>../src/ASF/avr32/utils</Value>
+            <Value>../src/config</Value>
+            <Value>../src/ASF/common/boards</Value>
+            <Value>../src/ASF/avr32/utils/preprocessor</Value>
+            <Value>../src/ASF/avr32/drivers/intc</Value>
+            <Value>../src/ASF/common/utils</Value>
+            <Value>../src</Value>
+            <Value>../src/ASF/common/boards/user_board</Value>
+            <Value>../src/ASF/avr32/drivers/canif</Value>
+            <Value>../src/ASF/avr32/drivers/usart</Value>
+            <Value>../src/ASF/avr32/drivers/flashc</Value>
+            <Value>../src/ASF/common/services/clock</Value>
+            <Value>../src/ASF/avr32/drivers/cpu</Value>
+            <Value>../src/ASF/avr32/drivers/gpio</Value>
+            <Value>../src/ASF/avr32/drivers/scif</Value>
+            <Value>../src/ASF/avr32/drivers/cpu/cycle_counter</Value>
+            <Value>../src/ASF/common/services/delay</Value>
+            <Value>../src/ASF/avr32/drivers/pm</Value>
+            <Value>../src/ASF/avr32/drivers/usbc</Value>
+            <Value>../src/ASF/common/services/sleepmgr</Value>
+            <Value>../src/ASF/common/services/usb</Value>
+            <Value>../src/ASF/common/services/usb/class/cdc</Value>
+            <Value>../src/ASF/common/services/usb/class/cdc/device</Value>
+            <Value>../src/ASF/common/services/usb/udc</Value>
+            <Value>../src/ASF/avr32/drivers/ast</Value>
+          </ListValues>
+        </avr32gcc.compiler.directories.IncludePaths>
+        <avr32gcc.compiler.optimization.level>Optimize for size (-Os)</avr32gcc.compiler.optimization.level>
+        <avr32gcc.compiler.optimization.OtherFlags>-fdata-sections</avr32gcc.compiler.optimization.OtherFlags>
+        <avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <avr32gcc.compiler.optimization.PrepareDataForGarbageCollection>True</avr32gcc.compiler.optimization.PrepareDataForGarbageCollection>
+        <avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>True</avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>
+        <avr32gcc.compiler.warnings.AllWarnings>True</avr32gcc.compiler.warnings.AllWarnings>
+        <avr32gcc.compiler.miscellaneous.OtherFlags>-std=gnu99 -fno-strict-aliasing -Wstrict-prototypes -Wmissing-prototypes -Werror-implicit-function-declaration -Wpointer-arith -mrelax -mno-cond-exec-before-reload</avr32gcc.compiler.miscellaneous.OtherFlags>
+        <avr32gcc.linker.general.DoNotUseStandardStartFiles>True</avr32gcc.linker.general.DoNotUseStandardStartFiles>
+        <avr32gcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avr32gcc.linker.libraries.Libraries>
+        <avr32gcc.linker.optimization.GarbageCollectUnusedSections>True</avr32gcc.linker.optimization.GarbageCollectUnusedSections>
+        <avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>True</avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>
+        <avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>True</avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>
+        <avr32gcc.linker.miscellaneous.LinkerFlags>-Wl,--relax -Wl,-e,_trampoline</avr32gcc.linker.miscellaneous.LinkerFlags>
+        <avr32gcc.assembler.general.AssemblerFlags>-mrelax</avr32gcc.assembler.general.AssemblerFlags>
+        <avr32gcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>../common/applications/user_application/user_board/config</Value>
+            <Value>../src/ASF/avr32/utils</Value>
+            <Value>../src/config</Value>
+            <Value>../src/ASF/common/boards</Value>
+            <Value>../src/ASF/avr32/utils/preprocessor</Value>
+            <Value>../src/ASF/avr32/drivers/intc</Value>
+            <Value>../src/ASF/common/utils</Value>
+            <Value>../src</Value>
+            <Value>../src/ASF/common/boards/user_board</Value>
+            <Value>../src/ASF/avr32/drivers/canif</Value>
+            <Value>../src/ASF/avr32/drivers/usart</Value>
+            <Value>../src/ASF/avr32/drivers/flashc</Value>
+            <Value>../src/ASF/common/services/clock</Value>
+            <Value>../src/ASF/avr32/drivers/cpu</Value>
+            <Value>../src/ASF/avr32/drivers/gpio</Value>
+            <Value>../src/ASF/avr32/drivers/scif</Value>
+            <Value>../src/ASF/avr32/drivers/cpu/cycle_counter</Value>
+            <Value>../src/ASF/common/services/delay</Value>
+            <Value>../src/ASF/avr32/drivers/pm</Value>
+            <Value>../src/ASF/avr32/drivers/usbc</Value>
+            <Value>../src/ASF/common/services/sleepmgr</Value>
+            <Value>../src/ASF/common/services/usb</Value>
+            <Value>../src/ASF/common/services/usb/class/cdc</Value>
+            <Value>../src/ASF/common/services/usb/class/cdc/device</Value>
+            <Value>../src/ASF/common/services/usb/udc</Value>
+            <Value>../src/ASF/avr32/drivers/ast</Value>
+          </ListValues>
+        </avr32gcc.assembler.general.IncludePaths>
+        <avr32gcc.preprocessingassembler.general.AssemblerFlags>-mrelax -DBOARD=USER_BOARD -DUDD_ENABLE</avr32gcc.preprocessingassembler.general.AssemblerFlags>
+        <avr32gcc.preprocessingassembler.general.IncludePaths>
+          <ListValues>
+            <Value>../common/applications/user_application/user_board/config</Value>
+            <Value>../src/ASF/avr32/utils</Value>
+            <Value>../src/config</Value>
+            <Value>../src/ASF/common/boards</Value>
+            <Value>../src/ASF/avr32/utils/preprocessor</Value>
+            <Value>../src/ASF/avr32/drivers/intc</Value>
+            <Value>../src/ASF/common/utils</Value>
+            <Value>../src</Value>
+            <Value>../src/ASF/common/boards/user_board</Value>
+            <Value>../src/ASF/avr32/drivers/canif</Value>
+            <Value>../src/ASF/avr32/drivers/usart</Value>
+            <Value>../src/ASF/avr32/drivers/flashc</Value>
+            <Value>../src/ASF/common/services/clock</Value>
+            <Value>../src/ASF/avr32/drivers/cpu</Value>
+            <Value>../src/ASF/avr32/drivers/gpio</Value>
+            <Value>../src/ASF/avr32/drivers/scif</Value>
+            <Value>../src/ASF/avr32/drivers/cpu/cycle_counter</Value>
+            <Value>../src/ASF/common/services/delay</Value>
+            <Value>../src/ASF/avr32/drivers/pm</Value>
+            <Value>../src/ASF/avr32/drivers/usbc</Value>
+            <Value>../src/ASF/common/services/sleepmgr</Value>
+            <Value>../src/ASF/common/services/usb</Value>
+            <Value>../src/ASF/common/services/usb/class/cdc</Value>
+            <Value>../src/ASF/common/services/usb/class/cdc/device</Value>
+            <Value>../src/ASF/common/services/usb/udc</Value>
+            <Value>../src/ASF/avr32/drivers/ast</Value>
+          </ListValues>
+        </avr32gcc.preprocessingassembler.general.IncludePaths>
+      </Avr32Gcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <Avr32Gcc>
+        <avr32gcc.common.outputfiles.hex>True</avr32gcc.common.outputfiles.hex>
+        <avr32gcc.common.outputfiles.lss>True</avr32gcc.common.outputfiles.lss>
+        <avr32gcc.common.outputfiles.eep>True</avr32gcc.common.outputfiles.eep>
+        <avr32gcc.common.outputfiles.srec>True</avr32gcc.common.outputfiles.srec>
+        <avr32gcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+            <Value>BOARD=USER_BOARD</Value>
+            <Value>UDD_ENABLE</Value>
+          </ListValues>
+        </avr32gcc.compiler.symbols.DefSymbols>
+        <avr32gcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>../src/ASF/avr32/utils</Value>
+            <Value>../src/config</Value>
+            <Value>../src/ASF/common/boards</Value>
+            <Value>../src/ASF/avr32/utils/preprocessor</Value>
+            <Value>../src/ASF/avr32/drivers/intc</Value>
+            <Value>../src/ASF/common/utils</Value>
+            <Value>../src</Value>
+            <Value>../src/ASF/common/boards/user_board</Value>
+            <Value>../Library/communication</Value>
+            <Value>../Library/hal</Value>
+            <Value>../Library/mavlink</Value>
+            <Value>../Library/util</Value>
+            <Value>../Library</Value>
+            <Value>../src/ASF/avr32/drivers/canif</Value>
+            <Value>../src/ASF/avr32/drivers/usart</Value>
+            <Value>../src/ASF/avr32/drivers/flashc</Value>
+            <Value>../src/ASF/common/services/clock</Value>
+            <Value>../src/ASF/avr32/drivers/cpu</Value>
+            <Value>../src/ASF/avr32/drivers/gpio</Value>
+            <Value>../src/ASF/avr32/drivers/scif</Value>
+            <Value>../src/ASF/avr32/drivers/cpu/cycle_counter</Value>
+            <Value>../src/ASF/common/services/delay</Value>
+            <Value>../src/ASF/avr32/drivers/pm</Value>
+            <Value>../src/ASF/avr32/drivers/usbc</Value>
+            <Value>../src/ASF/common/services/sleepmgr</Value>
+            <Value>../src/ASF/common/services/usb</Value>
+            <Value>../src/ASF/common/services/usb/class/cdc</Value>
+            <Value>../src/ASF/common/services/usb/class/cdc/device</Value>
+            <Value>../src/ASF/common/services/usb/udc</Value>
+            <Value>../src/ASF/avr32/drivers/ast</Value>
+            <Value>../src/mavric</Value>
+          </ListValues>
+        </avr32gcc.compiler.directories.IncludePaths>
+        <avr32gcc.compiler.optimization.OtherFlags>-fdata-sections</avr32gcc.compiler.optimization.OtherFlags>
+        <avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <avr32gcc.compiler.optimization.PrepareDataForGarbageCollection>True</avr32gcc.compiler.optimization.PrepareDataForGarbageCollection>
+        <avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>True</avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>
+        <avr32gcc.compiler.optimization.DebugLevel>Maximum (-g3)</avr32gcc.compiler.optimization.DebugLevel>
+        <avr32gcc.compiler.warnings.AllWarnings>True</avr32gcc.compiler.warnings.AllWarnings>
+        <avr32gcc.compiler.miscellaneous.OtherFlags>-std=gnu99 -fno-strict-aliasing -Wstrict-prototypes -Wmissing-prototypes -Werror-implicit-function-declaration -Wpointer-arith -mrelax -mno-cond-exec-before-reload</avr32gcc.compiler.miscellaneous.OtherFlags>
+        <avr32gcc.linker.general.DoNotUseStandardStartFiles>True</avr32gcc.linker.general.DoNotUseStandardStartFiles>
+        <avr32gcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avr32gcc.linker.libraries.Libraries>
+        <avr32gcc.linker.optimization.GarbageCollectUnusedSections>True</avr32gcc.linker.optimization.GarbageCollectUnusedSections>
+        <avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>True</avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>
+        <avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>True</avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>
+        <avr32gcc.linker.miscellaneous.LinkerFlags>-Wl,--relax -Wl,-e,_trampoline</avr32gcc.linker.miscellaneous.LinkerFlags>
+        <avr32gcc.assembler.general.AssemblerFlags>-mrelax</avr32gcc.assembler.general.AssemblerFlags>
+        <avr32gcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>../common/applications/user_application/user_board/config</Value>
+            <Value>../src/ASF/avr32/utils</Value>
+            <Value>../src/config</Value>
+            <Value>../src/ASF/common/boards</Value>
+            <Value>../src/ASF/avr32/utils/preprocessor</Value>
+            <Value>../src/ASF/avr32/drivers/intc</Value>
+            <Value>../src/ASF/common/utils</Value>
+            <Value>../src</Value>
+            <Value>../src/ASF/common/boards/user_board</Value>
+            <Value>../src/ASF/avr32/drivers/canif</Value>
+            <Value>../src/ASF/avr32/drivers/usart</Value>
+            <Value>../src/ASF/avr32/drivers/flashc</Value>
+            <Value>../src/ASF/common/services/clock</Value>
+            <Value>../src/ASF/avr32/drivers/cpu</Value>
+            <Value>../src/ASF/avr32/drivers/gpio</Value>
+            <Value>../src/ASF/avr32/drivers/scif</Value>
+            <Value>../src/ASF/avr32/drivers/cpu/cycle_counter</Value>
+            <Value>../src/ASF/common/services/delay</Value>
+            <Value>../src/ASF/avr32/drivers/pm</Value>
+            <Value>../src/ASF/avr32/drivers/usbc</Value>
+            <Value>../src/ASF/common/services/sleepmgr</Value>
+            <Value>../src/ASF/common/services/usb</Value>
+            <Value>../src/ASF/common/services/usb/class/cdc</Value>
+            <Value>../src/ASF/common/services/usb/class/cdc/device</Value>
+            <Value>../src/ASF/common/services/usb/udc</Value>
+            <Value>../src/ASF/avr32/drivers/ast</Value>
+          </ListValues>
+        </avr32gcc.assembler.general.IncludePaths>
+        <avr32gcc.assembler.debugging.DebugLevel>Default (-g)</avr32gcc.assembler.debugging.DebugLevel>
+        <avr32gcc.preprocessingassembler.general.AssemblerFlags>-mrelax -DBOARD=USER_BOARD -DUDD_ENABLE</avr32gcc.preprocessingassembler.general.AssemblerFlags>
+        <avr32gcc.preprocessingassembler.general.IncludePaths>
+          <ListValues>
+            <Value>../common/applications/user_application/user_board/config</Value>
+            <Value>../src/ASF/avr32/utils</Value>
+            <Value>../src/config</Value>
+            <Value>../src/ASF/common/boards</Value>
+            <Value>../src/ASF/avr32/utils/preprocessor</Value>
+            <Value>../src/ASF/avr32/drivers/intc</Value>
+            <Value>../src/ASF/common/utils</Value>
+            <Value>../src</Value>
+            <Value>../src/ASF/common/boards/user_board</Value>
+            <Value>../src/ASF/avr32/drivers/canif</Value>
+            <Value>../src/ASF/avr32/drivers/usart</Value>
+            <Value>../src/ASF/avr32/drivers/flashc</Value>
+            <Value>../src/ASF/common/services/clock</Value>
+            <Value>../src/ASF/avr32/drivers/cpu</Value>
+            <Value>../src/ASF/avr32/drivers/gpio</Value>
+            <Value>../src/ASF/avr32/drivers/scif</Value>
+            <Value>../src/ASF/avr32/drivers/cpu/cycle_counter</Value>
+            <Value>../src/ASF/common/services/delay</Value>
+            <Value>../src/ASF/avr32/drivers/pm</Value>
+            <Value>../src/ASF/avr32/drivers/usbc</Value>
+            <Value>../src/ASF/common/services/sleepmgr</Value>
+            <Value>../src/ASF/common/services/usb</Value>
+            <Value>../src/ASF/common/services/usb/class/cdc</Value>
+            <Value>../src/ASF/common/services/usb/class/cdc/device</Value>
+            <Value>../src/ASF/common/services/usb/udc</Value>
+            <Value>../src/ASF/avr32/drivers/ast</Value>
+          </ListValues>
+        </avr32gcc.preprocessingassembler.general.IncludePaths>
+        <avr32gcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</avr32gcc.preprocessingassembler.debugging.DebugLevel>
+      </Avr32Gcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Optimized' ">
+    <ToolchainSettings>
+      <Avr32Gcc>
+  <avr32gcc.common.outputfiles.hex>True</avr32gcc.common.outputfiles.hex>
+  <avr32gcc.common.outputfiles.lss>True</avr32gcc.common.outputfiles.lss>
+  <avr32gcc.common.outputfiles.eep>True</avr32gcc.common.outputfiles.eep>
+  <avr32gcc.common.outputfiles.srec>True</avr32gcc.common.outputfiles.srec>
+  <avr32gcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+      <Value>BOARD=USER_BOARD</Value>
+      <Value>UDD_ENABLE</Value>
+    </ListValues>
+  </avr32gcc.compiler.symbols.DefSymbols>
+  <avr32gcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../common/applications/user_application/user_board/config</Value>
+      <Value>../src/ASF/avr32/utils</Value>
+      <Value>../src/config</Value>
+      <Value>../src/ASF/common/boards</Value>
+      <Value>../src/ASF/avr32/utils/preprocessor</Value>
+      <Value>../src/ASF/avr32/drivers/intc</Value>
+      <Value>../src/ASF/common/utils</Value>
+      <Value>../src</Value>
+      <Value>../src/ASF/common/boards/user_board</Value>
+      <Value>../Library/communication</Value>
+      <Value>../Library/hal</Value>
+      <Value>../Library</Value>
+      <Value>../Library/util</Value>
+      <Value>../Library/runtime</Value>
+      <Value>../src/ASF/avr32/drivers/canif</Value>
+      <Value>../src/ASF/avr32/drivers/usart</Value>
+      <Value>../src/ASF/avr32/drivers/flashc</Value>
+      <Value>../src/ASF/common/services/clock</Value>
+      <Value>../src/ASF/avr32/drivers/cpu</Value>
+      <Value>../src/ASF/avr32/drivers/gpio</Value>
+      <Value>../src/ASF/avr32/drivers/scif</Value>
+      <Value>../src/ASF/avr32/drivers/cpu/cycle_counter</Value>
+      <Value>../src/ASF/common/services/delay</Value>
+      <Value>../src/ASF/avr32/drivers/pm</Value>
+      <Value>../src/ASF/avr32/drivers/usbc</Value>
+      <Value>../src/ASF/common/services/sleepmgr</Value>
+      <Value>../src/ASF/common/services/usb</Value>
+      <Value>../src/ASF/common/services/usb/class/cdc</Value>
+      <Value>../src/ASF/common/services/usb/class/cdc/device</Value>
+      <Value>../src/ASF/common/services/usb/udc</Value>
+      <Value>../Library/hal/drivers</Value>
+      <Value>../src/ASF/avr32/drivers/ast</Value>
+      <Value>../src/mavric</Value>
+    </ListValues>
+  </avr32gcc.compiler.directories.IncludePaths>
+  <avr32gcc.compiler.optimization.level>Optimize for size (-Os)</avr32gcc.compiler.optimization.level>
+  <avr32gcc.compiler.optimization.OtherFlags>-fdata-sections</avr32gcc.compiler.optimization.OtherFlags>
+  <avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</avr32gcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <avr32gcc.compiler.optimization.PrepareDataForGarbageCollection>True</avr32gcc.compiler.optimization.PrepareDataForGarbageCollection>
+  <avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>True</avr32gcc.compiler.optimization.UseAssemblerForPseudoInstructions>
+  <avr32gcc.compiler.optimization.DebugLevel>Maximum (-g3)</avr32gcc.compiler.optimization.DebugLevel>
+  <avr32gcc.compiler.warnings.AllWarnings>True</avr32gcc.compiler.warnings.AllWarnings>
+  <avr32gcc.compiler.miscellaneous.OtherFlags>-std=gnu99 -fno-strict-aliasing -Wstrict-prototypes -Wmissing-prototypes -Werror-implicit-function-declaration -Wpointer-arith -mrelax -mno-cond-exec-before-reload</avr32gcc.compiler.miscellaneous.OtherFlags>
+  <avr32gcc.linker.general.DoNotUseStandardStartFiles>True</avr32gcc.linker.general.DoNotUseStandardStartFiles>
+  <avr32gcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avr32gcc.linker.libraries.Libraries>
+  <avr32gcc.linker.optimization.GarbageCollectUnusedSections>True</avr32gcc.linker.optimization.GarbageCollectUnusedSections>
+  <avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>True</avr32gcc.linker.optimization.PutReadOnlyDataInWritableDataSection>
+  <avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>True</avr32gcc.linker.optimization.AllowDirectReferencesToDataSection>
+  <avr32gcc.linker.miscellaneous.LinkerFlags>-Wl,--relax -Wl,-e,_trampoline</avr32gcc.linker.miscellaneous.LinkerFlags>
+  <avr32gcc.assembler.general.AssemblerFlags>-mrelax</avr32gcc.assembler.general.AssemblerFlags>
+  <avr32gcc.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>../common/applications/user_application/user_board/config</Value>
+      <Value>../src/ASF/avr32/utils</Value>
+      <Value>../src/config</Value>
+      <Value>../src/ASF/common/boards</Value>
+      <Value>../src/ASF/avr32/utils/preprocessor</Value>
+      <Value>../src/ASF/avr32/drivers/intc</Value>
+      <Value>../src/ASF/common/utils</Value>
+      <Value>../src</Value>
+      <Value>../src/ASF/common/boards/user_board</Value>
+      <Value>../src/ASF/avr32/drivers/canif</Value>
+      <Value>../src/ASF/avr32/drivers/usart</Value>
+      <Value>../src/ASF/avr32/drivers/flashc</Value>
+      <Value>../src/ASF/common/services/clock</Value>
+      <Value>../src/ASF/avr32/drivers/cpu</Value>
+      <Value>../src/ASF/avr32/drivers/gpio</Value>
+      <Value>../src/ASF/avr32/drivers/scif</Value>
+      <Value>../src/ASF/avr32/drivers/cpu/cycle_counter</Value>
+      <Value>../src/ASF/common/services/delay</Value>
+      <Value>../src/ASF/avr32/drivers/pm</Value>
+      <Value>../src/ASF/avr32/drivers/usbc</Value>
+      <Value>../src/ASF/common/services/sleepmgr</Value>
+      <Value>../src/ASF/common/services/usb</Value>
+      <Value>../src/ASF/common/services/usb/class/cdc</Value>
+      <Value>../src/ASF/common/services/usb/class/cdc/device</Value>
+      <Value>../src/ASF/common/services/usb/udc</Value>
+      <Value>../src/ASF/avr32/drivers/ast</Value>
+    </ListValues>
+  </avr32gcc.assembler.general.IncludePaths>
+  <avr32gcc.assembler.debugging.DebugLevel>Default (-g)</avr32gcc.assembler.debugging.DebugLevel>
+  <avr32gcc.preprocessingassembler.general.AssemblerFlags>-mrelax -DBOARD=USER_BOARD -DUDD_ENABLE</avr32gcc.preprocessingassembler.general.AssemblerFlags>
+  <avr32gcc.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>../common/applications/user_application/user_board/config</Value>
+      <Value>../src/ASF/avr32/utils</Value>
+      <Value>../src/config</Value>
+      <Value>../src/ASF/common/boards</Value>
+      <Value>../src/ASF/avr32/utils/preprocessor</Value>
+      <Value>../src/ASF/avr32/drivers/intc</Value>
+      <Value>../src/ASF/common/utils</Value>
+      <Value>../src</Value>
+      <Value>../src/ASF/common/boards/user_board</Value>
+      <Value>../src/ASF/avr32/drivers/canif</Value>
+      <Value>../src/ASF/avr32/drivers/usart</Value>
+      <Value>../src/ASF/avr32/drivers/flashc</Value>
+      <Value>../src/ASF/common/services/clock</Value>
+      <Value>../src/ASF/avr32/drivers/cpu</Value>
+      <Value>../src/ASF/avr32/drivers/gpio</Value>
+      <Value>../src/ASF/avr32/drivers/scif</Value>
+      <Value>../src/ASF/avr32/drivers/cpu/cycle_counter</Value>
+      <Value>../src/ASF/common/services/delay</Value>
+      <Value>../src/ASF/avr32/drivers/pm</Value>
+      <Value>../src/ASF/avr32/drivers/usbc</Value>
+      <Value>../src/ASF/common/services/sleepmgr</Value>
+      <Value>../src/ASF/common/services/usb</Value>
+      <Value>../src/ASF/common/services/usb/class/cdc</Value>
+      <Value>../src/ASF/common/services/usb/class/cdc/device</Value>
+      <Value>../src/ASF/common/services/usb/udc</Value>
+      <Value>../src/ASF/avr32/drivers/ast</Value>
+    </ListValues>
+  </avr32gcc.preprocessingassembler.general.IncludePaths>
+  <avr32gcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</avr32gcc.preprocessingassembler.debugging.DebugLevel>
+</Avr32Gcc>
+    </ToolchainSettings>
+    <OutputPath>bin\Optimized\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Library\communication\mavboot.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\communication\mavboot.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\communication\mavboot.h" />
+    <Compile Include="Library\communication\mavlink_stream.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\communication\mavlink_stream.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\communication\small_checksum.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\communication\small_checksum.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\hal\drivers\can_bus.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\hal\drivers\can_bus_minimal.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\hal\drivers\uart_int.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\hal\drivers\uart_int.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\auv\auv.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\auv\mavlink.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\auv\mavlink_msg_bootloader_cmd.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\auv\mavlink_msg_bootloader_data.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\auv\mavlink_msg_can_packet.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\auv\mavlink_msg_motor_command.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\auv\mavlink_msg_motor_state.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\auv\mavlink_msg_raw_data_stream_16.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\auv\mavlink_msg_raw_data_stream_8.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\auv\mavlink_msg_raw_data_stream_float.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\auv\testsuite.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\auv\version.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\checksum.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\common.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_actuator_control_target.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_altitude.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_attitude.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_attitude_quaternion.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_attitude_quaternion_cov.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_attitude_target.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_att_pos_mocap.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_auth_key.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_autopilot_version.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_battery_status.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_camera_trigger.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_change_operator_control.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_change_operator_control_ack.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_command_ack.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_command_int.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_command_long.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_control_system_state.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_data_stream.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_data_transmission_handshake.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_debug.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_debug_vect.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_distance_sensor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_encapsulated_data.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_file_transfer_protocol.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_global_position_int.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_global_position_int_cov.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_global_vision_position_estimate.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_gps2_raw.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_gps2_rtk.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_gps_global_origin.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_gps_inject_data.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_gps_raw_int.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_gps_rtk.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_gps_status.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_heartbeat.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_highres_imu.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_hil_controls.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_hil_gps.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_hil_optical_flow.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_hil_rc_inputs_raw.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_hil_sensor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_hil_state.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_hil_state_quaternion.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_home_position.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_landing_target.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_local_position_ned.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_local_position_ned_cov.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_local_position_ned_system_global_offset.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_log_data.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_log_entry.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_log_erase.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_log_request_data.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_log_request_end.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_log_request_list.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_manual_control.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_manual_setpoint.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_memory_vect.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_message_interval.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_mission_ack.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_mission_clear_all.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_mission_count.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_mission_current.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_mission_item.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_mission_item_int.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_mission_item_reached.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_mission_request.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_mission_request_list.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_mission_request_partial_list.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_mission_set_current.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_mission_write_partial_list.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_named_value_float.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_named_value_int.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_nav_controller_output.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_optical_flow.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_optical_flow_rad.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_param_map_rc.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_param_request_list.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_param_request_read.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_param_set.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_param_value.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_ping.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_position_target_global_int.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_position_target_local_ned.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_power_status.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_radio_status.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_raw_imu.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_raw_pressure.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_rc_channels.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_rc_channels_override.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_rc_channels_raw.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_rc_channels_scaled.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_request_data_stream.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_resource_request.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_safety_allowed_area.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_safety_set_allowed_area.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_scaled_imu.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_scaled_imu2.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_scaled_imu3.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_scaled_pressure.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_scaled_pressure2.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_serial_control.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_servo_output_raw.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_set_actuator_control_target.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_set_attitude_target.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_set_gps_global_origin.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_set_home_position.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_set_mode.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_set_position_target_global_int.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_set_position_target_local_ned.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_sim_state.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_statustext.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_system_time.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_sys_status.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_terrain_check.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_terrain_data.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_terrain_report.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_terrain_request.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_timesync.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_v2_extension.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_vfr_hud.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_vibration.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_vicon_position_estimate.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_vision_position_estimate.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_vision_speed_estimate.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\mavlink_msg_vtol_state.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\testsuite.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\common\version.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\mavlink_conversions.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\mavlink_helpers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\mavlink_types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\mavlink\include\protocol.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\mavric\boardsupport.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\mavric\boardsupport.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\mavric\mavboot_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="Library\mavlink\maveric.xml">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="Library\mavlink\maveric2.xml">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\asf.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="Library\util\buffer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\util\buffer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\util\common_types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\util\streams.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Library\util\streams_functions.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\avr32\drivers\canif\canif.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\avr32\drivers\canif\canif.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\avr32\drivers\cpu\avr32_reset_cause.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\avr32\drivers\cpu\cycle_counter\cycle_counter.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\avr32\drivers\flashc\flashc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\avr32\drivers\flashc\flashc.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\avr32\drivers\gpio\gpio.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\avr32\drivers\gpio\gpio.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\avr32\drivers\intc\exception.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\avr32\drivers\intc\intc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\avr32\utils\make\Makefile.avr32.in">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\avr32\utils\make\Makefile.avr32program.in">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\avr32\utils\make\Makefile.batchisp.in">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\avr32\utils\preprocessor\preprocessor.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\avr32\utils\preprocessor\mrepeat.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\avr32\utils\header_files\uc3l3_l4_defines_fix.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\avr32\utils\preprocessor\stringz.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\avr32\utils\preprocessor\tpaste.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\avr32\drivers\intc\intc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\avr32\utils\header_files\uc3d_defines_fix.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\avr32\utils\compiler.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\avr32\drivers\pm\pm_uc3c.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\avr32\drivers\pm\pm_uc3c.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\avr32\drivers\pm\power_clocks_lib.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\avr32\drivers\pm\power_clocks_lib.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\avr32\drivers\pm\sleep.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\avr32\drivers\scif\scif_uc3c.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\avr32\drivers\scif\scif_uc3c.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\avr32\drivers\usart\usart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\avr32\drivers\usart\usart.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\avr32\drivers\usbc\usbc_device.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\avr32\drivers\usbc\usbc_device.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\avr32\drivers\usbc\usbc_otg.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\avr32\utils\startup\startup_uc3.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\avr32\utils\startup\trampoline_uc3.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\avr32\utils\startup\trampoline_uc3.S">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\avr32\utils\status_codes.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\boards\board.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\common\boards\user_board\init.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\config\conf_board.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\utils\interrupt\interrupt_avr32.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\utils\interrupt.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\utils\parts.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\boards\user_board\user_board.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\config\conf_can.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\clock\genclk.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\clock\osc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\clock\uc3c\genclk.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\clock\sysclk.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\clock\pll.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\common\services\clock\uc3c\osc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\common\services\clock\uc3c\osc.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\common\services\clock\uc3c\pll.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\common\services\clock\uc3c\pll.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\common\services\clock\uc3c\sysclk.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\common\services\clock\uc3c\sysclk.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\config\conf_clock.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\delay\delay.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\sleepmgr\sleepmgr.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\common\services\sleepmgr\uc3\sleepmgr.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\common\services\sleepmgr\uc3\sleepmgr.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\usb\usb_atmel.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\usb\usb_protocol.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\usb\class\cdc\usb_protocol_cdc.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\common\services\usb\class\cdc\device\udi_cdc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\common\services\usb\class\cdc\device\udi_cdc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\usb\class\cdc\device\udi_cdc_conf.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\common\services\usb\class\cdc\device\udi_cdc_desc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\common\services\usb\udc\udc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\common\services\usb\udc\udc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\usb\udc\udd.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\usb\udc\udc_desc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\usb\udc\udi.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\central_data.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\central_data.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\config\conf_sleepmgr.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\config\conf_usb.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\main.c">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Library\" />
+    <Folder Include="Library\" />
+    <Folder Include="Library\communication\" />
+    <Folder Include="Library\communication\" />
+    <Folder Include="Library\hal\" />
+    <Folder Include="Library\hal\drivers\" />
+    <Folder Include="Library\hal\drivers\" />
+    <Folder Include="Library\mavlink\" />
+    <Folder Include="Library\mavlink\include\" />
+    <Folder Include="Library\mavlink\include\auv\" />
+    <Folder Include="Library\mavlink\include\common\" />
+    <Folder Include="Library\util\" />
+    <Folder Include="src\" />
+    <Folder Include="src\ASF\" />
+    <Folder Include="src\ASF\avr32\" />
+    <Folder Include="src\ASF\avr32\drivers\" />
+    <Folder Include="src\ASF\avr32\drivers\canif\" />
+    <Folder Include="src\ASF\avr32\drivers\cpu\" />
+    <Folder Include="src\ASF\avr32\drivers\cpu\cycle_counter\" />
+    <Folder Include="src\ASF\avr32\drivers\flashc\" />
+    <Folder Include="src\ASF\avr32\drivers\gpio\" />
+    <Folder Include="src\ASF\avr32\drivers\intc\" />
+    <Folder Include="src\ASF\avr32\drivers\pm\" />
+    <Folder Include="src\ASF\avr32\drivers\scif\" />
+    <Folder Include="src\ASF\avr32\drivers\usart\" />
+    <Folder Include="src\ASF\avr32\drivers\usbc\" />
+    <Folder Include="src\ASF\avr32\utils\" />
+    <Folder Include="src\ASF\avr32\utils\header_files\" />
+    <Folder Include="src\ASF\avr32\utils\make\" />
+    <Folder Include="src\ASF\avr32\utils\preprocessor\" />
+    <Folder Include="src\ASF\avr32\utils\startup\" />
+    <Folder Include="src\ASF\common\" />
+    <Folder Include="src\ASF\common\boards\" />
+    <Folder Include="src\ASF\common\boards\user_board\" />
+    <Folder Include="src\ASF\common\services\" />
+    <Folder Include="src\ASF\common\services\clock\" />
+    <Folder Include="src\ASF\common\services\clock\uc3c\" />
+    <Folder Include="src\ASF\common\services\delay\" />
+    <Folder Include="src\ASF\common\services\sleepmgr\" />
+    <Folder Include="src\ASF\common\services\sleepmgr\uc3\" />
+    <Folder Include="src\ASF\common\services\usb\" />
+    <Folder Include="src\ASF\common\services\usb\class\" />
+    <Folder Include="src\ASF\common\services\usb\class\cdc\" />
+    <Folder Include="src\ASF\common\services\usb\class\cdc\device\" />
+    <Folder Include="src\ASF\common\services\usb\udc\" />
+    <Folder Include="src\ASF\common\utils\" />
+    <Folder Include="src\ASF\common\utils\interrupt\" />
+    <Folder Include="src\config\" />
+    <Folder Include="src\mavric\" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

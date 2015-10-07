@@ -1,0 +1,14 @@
+#ifndef MAVBOOT_CONFIG_H
+#define MAVBOOT_CONFIG_H
+
+#include "boardsupport.h"
+
+#define BOOTLOADER_IDLE_WAIT_TIME 2000000
+
+#define MAVLINK_BASE_STATION_ID 255
+
+#define MAVLINK_SYS_ID 1
+#define MAVLINK_COMPONENT_ID 10
+
+
+#endif

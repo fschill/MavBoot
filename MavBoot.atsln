@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "MavBoot", "MavBoot.cproj", "{DD31E21F-6EF1-4516-87D7-8FFB38DB911D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Optimized|AVR = Optimized|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD31E21F-6EF1-4516-87D7-8FFB38DB911D}.Debug|AVR.ActiveCfg = Debug|AVR
+		{DD31E21F-6EF1-4516-87D7-8FFB38DB911D}.Debug|AVR.Build.0 = Debug|AVR
+		{DD31E21F-6EF1-4516-87D7-8FFB38DB911D}.Optimized|AVR.ActiveCfg = Optimized|AVR
+		{DD31E21F-6EF1-4516-87D7-8FFB38DB911D}.Optimized|AVR.Build.0 = Optimized|AVR
+		{DD31E21F-6EF1-4516-87D7-8FFB38DB911D}.Release|AVR.ActiveCfg = Release|AVR
+		{DD31E21F-6EF1-4516-87D7-8FFB38DB911D}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

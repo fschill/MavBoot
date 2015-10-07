@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Project Name="MavBoot_Mavric" InternalType="Console">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00010001N0005Debug000000000000]]>
+    </Plugin>
+    <Plugin Name="CMakePlugin">
+      <![CDATA[[{
+  "name": "Debug",
+  "enabled": false,
+  "buildDirectory": "build",
+  "sourceDirectory": "$(ProjectPath)",
+  "generator": "",
+  "buildType": "",
+  "arguments": [],
+  "parentProject": ""
+ }]]]>
+    </Plugin>
+  </Plugins>
+  <VirtualDirectory Name="Library">
+    <VirtualDirectory Name="mavlink">
+      <VirtualDirectory Name="include">
+        <VirtualDirectory Name="maveric">
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_radar_velocity_hist.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_debug_vect.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_local_position_ned_system_global_offset.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_manual_control.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_highres_imu.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_mission_request_list.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_raw_imu.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_command_long.h"/>
+          <File Name="Library/mavlink/include/maveric/testsuite.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_hil_controls.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_vfr_hud.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_file_transfer_start.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_scaled_imu.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_statustext.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_roll_pitch_yaw_speed_thrust_setpoint.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_state_correction.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_local_position_setpoint.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_named_value_float.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_sim_state.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_sys_status.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_radar_tracked_target.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_attitude_quaternion.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_hil_rc_inputs_raw.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_attitude.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_mission_request_partial_list.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_vision_position_estimate.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_raw_data_stream.h"/>
+          <File Name="Library/mavlink/include/maveric/version.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_data_stream.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_mission_item.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_param_request_read.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_system_time.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_rc_channels_scaled.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_setpoint_8dof.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_hil_gps.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_param_request_list.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_mission_item_reached.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_roll_pitch_yaw_thrust_setpoint.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_set_quad_swarm_roll_pitch_yaw_thrust.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_nav_controller_output.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_mission_count.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_gps_raw_int.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_raw_data_stream_descriptor.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_servo_output_raw.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_command_ack.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_set_global_position_setpoint_int.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_request_data_stream.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_vicon_position_estimate.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_change_operator_control_ack.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_gps_status.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_named_value_int.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_set_mode.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_set_roll_pitch_yaw_thrust.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_raw_pressure.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_hil_state.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_set_quad_motors_setpoint.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_set_quad_swarm_led_roll_pitch_yaw_thrust.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_battery_status.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_param_value.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_mission_ack.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_hil_sensor.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_file_transfer_dir_list.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_global_position_int.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_vision_speed_estimate.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_change_operator_control.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_radio_status.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_global_position_setpoint_int.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_radar_raw_data.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_manual_setpoint.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_mission_current.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_mission_write_partial_list.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_optical_flow.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_file_transfer_res.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_auth_key.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_set_gps_global_origin.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_set_roll_pitch_yaw_speed_thrust.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_hil_state_quaternion.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_ping.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_debug.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_global_vision_position_estimate.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_local_position_ned.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_gps_global_origin.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_safety_set_allowed_area.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_heartbeat.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_param_set.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_omnidirectional_flow.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_rc_channels_override.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_hil_optical_flow.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_safety_allowed_area.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_setpoint_6dof.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_rc_channels_raw.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_roll_pitch_yaw_rates_thrust_setpoint.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_mission_clear_all.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_set_local_position_setpoint.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_memory_vect.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_scaled_pressure.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_mission_request.h"/>
+          <File Name="Library/mavlink/include/maveric/mavlink_msg_mission_set_current.h"/>
+          <File Name="Library/mavlink/include/maveric/maveric2.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="dbgextensions">
+          <File Name="Library/mavlink/include/dbgextensions/mavlink_msg_raw_data_stream_16.h"/>
+          <File Name="Library/mavlink/include/dbgextensions/testsuite.h"/>
+          <File Name="Library/mavlink/include/dbgextensions/mavlink_msg_bootloader_cmd.h"/>
+          <File Name="Library/mavlink/include/dbgextensions/mavlink.h"/>
+          <File Name="Library/mavlink/include/dbgextensions/dbgextensions.h"/>
+          <File Name="Library/mavlink/include/dbgextensions/version.h"/>
+          <File Name="Library/mavlink/include/dbgextensions/mavlink_msg_raw_data_stream_float.h"/>
+          <File Name="Library/mavlink/include/dbgextensions/mavlink_msg_raw_data_stream_8.h"/>
+          <File Name="Library/mavlink/include/dbgextensions/mavlink_msg_can_packet.h"/>
+          <File Name="Library/mavlink/include/dbgextensions/mavlink_msg_bootloader_data.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="common">
+          <File Name="Library/mavlink/include/common/mavlink_msg_debug_vect.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_local_position_ned_system_global_offset.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_manual_control.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_highres_imu.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_mission_request_list.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_raw_imu.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_command_long.h"/>
+          <File Name="Library/mavlink/include/common/testsuite.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_hil_controls.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_vfr_hud.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_file_transfer_start.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_scaled_imu.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_statustext.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_roll_pitch_yaw_speed_thrust_setpoint.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_state_correction.h"/>
+          <File Name="Library/mavlink/include/common/mavlink.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_local_position_setpoint.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_named_value_float.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_sim_state.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_sys_status.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_attitude_quaternion.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_hil_rc_inputs_raw.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_attitude.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_mission_request_partial_list.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_vision_position_estimate.h"/>
+          <File Name="Library/mavlink/include/common/version.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_data_stream.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_mission_item.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_param_request_read.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_system_time.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_rc_channels_scaled.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_setpoint_8dof.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_hil_gps.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_param_request_list.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_mission_item_reached.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_roll_pitch_yaw_thrust_setpoint.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_set_quad_swarm_roll_pitch_yaw_thrust.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_nav_controller_output.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_mission_count.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_gps_raw_int.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_servo_output_raw.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_command_ack.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_set_global_position_setpoint_int.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_request_data_stream.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_vicon_position_estimate.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_change_operator_control_ack.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_gps_status.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_named_value_int.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_set_mode.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_set_roll_pitch_yaw_thrust.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_raw_pressure.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_hil_state.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_set_quad_motors_setpoint.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_set_quad_swarm_led_roll_pitch_yaw_thrust.h"/>
+          <File Name="Library/mavlink/include/common/common.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_battery_status.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_param_value.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_mission_ack.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_hil_sensor.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_file_transfer_dir_list.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_global_position_int.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_vision_speed_estimate.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_change_operator_control.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_radio_status.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_global_position_setpoint_int.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_manual_setpoint.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_mission_current.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_mission_write_partial_list.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_optical_flow.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_file_transfer_res.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_auth_key.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_set_gps_global_origin.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_set_roll_pitch_yaw_speed_thrust.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_hil_state_quaternion.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_ping.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_debug.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_global_vision_position_estimate.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_local_position_ned.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_gps_global_origin.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_safety_set_allowed_area.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_heartbeat.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_param_set.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_omnidirectional_flow.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_rc_channels_override.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_hil_optical_flow.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_safety_allowed_area.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_setpoint_6dof.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_rc_channels_raw.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_roll_pitch_yaw_rates_thrust_setpoint.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_mission_clear_all.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_set_local_position_setpoint.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_memory_vect.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_scaled_pressure.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_mission_request.h"/>
+          <File Name="Library/mavlink/include/common/mavlink_msg_mission_set_current.h"/>
+        </VirtualDirectory>
+        <File Name="Library/mavlink/include/mavlink_protobuf_manager.hpp"/>
+        <File Name="Library/mavlink/include/mavlink_conversions.h"/>
+        <File Name="Library/mavlink/include/mavlink_types.h"/>
+        <File Name="Library/mavlink/include/mavlink_helpers.h"/>
+        <File Name="Library/mavlink/include/checksum.h"/>
+        <File Name="Library/mavlink/include/protocol.h"/>
+      </VirtualDirectory>
+    </VirtualDirectory>
+    <VirtualDirectory Name="hal">
+      <VirtualDirectory Name="drivers">
+        <File Name="Library/hal/drivers/can_bus.h"/>
+        <File Name="Library/hal/drivers/usb_int.h"/>
+        <File Name="Library/hal/drivers/uart_int.c"/>
+        <File Name="Library/hal/drivers/usb_int.c"/>
+        <File Name="Library/hal/drivers/uart_int.h"/>
+        <File Name="Library/hal/drivers/can_bus_minimal.c"/>
+      </VirtualDirectory>
+    </VirtualDirectory>
+    <VirtualDirectory Name="util">
+      <File Name="Library/util/streams.h"/>
+      <File Name="Library/util/buffer.h"/>
+      <File Name="Library/util/buffer.c"/>
+      <File Name="Library/util/streams_functions.h"/>
+      <File Name="Library/util/common_types.h"/>
+    </VirtualDirectory>
+    <VirtualDirectory Name="communication">
+      <File Name="Library/communication/mavboot.h"/>
+      <File Name="Library/communication/mavboot.c"/>
+      <File Name="Library/communication/mavlink_stream.c"/>
+      <File Name="Library/communication/mavlink_stream.h"/>
+      <File Name="Library/communication/small_checksum.c"/>
+      <File Name="Library/communication/small_checksum.h"/>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <Description/>
+  <Dependencies/>
+  <VirtualDirectory Name="src">
+    <VirtualDirectory Name="ASF">
+      <VirtualDirectory Name="common">
+        <VirtualDirectory Name="boards">
+          <VirtualDirectory Name="user_board">
+            <File Name="src/ASF/common/boards/user_board/init.c"/>
+            <File Name="src/ASF/common/boards/user_board/user_board.h"/>
+          </VirtualDirectory>
+          <File Name="src/ASF/common/boards/board.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="utils">
+          <VirtualDirectory Name="interrupt">
+            <File Name="src/ASF/common/utils/interrupt/interrupt_avr32.h"/>
+          </VirtualDirectory>
+          <File Name="src/ASF/common/utils/parts.h"/>
+          <File Name="src/ASF/common/utils/interrupt.h"/>
+        </VirtualDirectory>
+        <VirtualDirectory Name="services">
+          <VirtualDirectory Name="sleepmgr">
+            <VirtualDirectory Name="uc3">
+              <File Name="src/ASF/common/services/sleepmgr/uc3/sleepmgr.h"/>
+              <File Name="src/ASF/common/services/sleepmgr/uc3/sleepmgr.c"/>
+            </VirtualDirectory>
+            <File Name="src/ASF/common/services/sleepmgr/sleepmgr.h"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="clock">
+            <VirtualDirectory Name="uc3c">
+              <File Name="src/ASF/common/services/clock/uc3c/osc.h"/>
+              <File Name="src/ASF/common/services/clock/uc3c/pll.h"/>
+              <File Name="src/ASF/common/services/clock/uc3c/sysclk.h"/>
+              <File Name="src/ASF/common/services/clock/uc3c/genclk.h"/>
+              <File Name="src/ASF/common/services/clock/uc3c/pll.c"/>
+              <File Name="src/ASF/common/services/clock/uc3c/osc.c"/>
+              <File Name="src/ASF/common/services/clock/uc3c/sysclk.c"/>
+            </VirtualDirectory>
+            <File Name="src/ASF/common/services/clock/osc.h"/>
+            <File Name="src/ASF/common/services/clock/pll.h"/>
+            <File Name="src/ASF/common/services/clock/sysclk.h"/>
+            <File Name="src/ASF/common/services/clock/genclk.h"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="usb">
+            <VirtualDirectory Name="class">
+              <VirtualDirectory Name="cdc">
+                <VirtualDirectory Name="device">
+                  <File Name="src/ASF/common/services/usb/class/cdc/device/udi_cdc.h" ExcludeProjConfig=""/>
+                  <File Name="src/ASF/common/services/usb/class/cdc/device/udi_cdc.c" ExcludeProjConfig=""/>
+                  <File Name="src/ASF/common/services/usb/class/cdc/device/udi_cdc_conf.h" ExcludeProjConfig=""/>
+                  <File Name="src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.c" ExcludeProjConfig=""/>
+                </VirtualDirectory>
+                <File Name="src/ASF/common/services/usb/class/cdc/usb_protocol_cdc.h"/>
+              </VirtualDirectory>
+            </VirtualDirectory>
+            <VirtualDirectory Name="udc">
+              <File Name="src/ASF/common/services/usb/udc/udc.c" ExcludeProjConfig=""/>
+              <File Name="src/ASF/common/services/usb/udc/udc.h" ExcludeProjConfig=""/>
+              <File Name="src/ASF/common/services/usb/udc/udd.h" ExcludeProjConfig=""/>
+              <File Name="src/ASF/common/services/usb/udc/udc_desc.h" ExcludeProjConfig=""/>
+              <File Name="src/ASF/common/services/usb/udc/udi.h" ExcludeProjConfig=""/>
+            </VirtualDirectory>
+            <File Name="src/ASF/common/services/usb/usb_atmel.h"/>
+            <File Name="src/ASF/common/services/usb/usb_protocol.h"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="delay">
+            <File Name="src/ASF/common/services/delay/delay.h"/>
+          </VirtualDirectory>
+        </VirtualDirectory>
+      </VirtualDirectory>
+      <VirtualDirectory Name="avr32">
+        <VirtualDirectory Name="drivers">
+          <VirtualDirectory Name="cpu">
+            <VirtualDirectory Name="cycle_counter">
+              <File Name="src/ASF/avr32/drivers/cpu/cycle_counter/cycle_counter.h"/>
+            </VirtualDirectory>
+            <File Name="src/ASF/avr32/drivers/cpu/avr32_reset_cause.h"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="pm">
+            <File Name="src/ASF/avr32/drivers/pm/sleep.h"/>
+            <File Name="src/ASF/avr32/drivers/pm/power_clocks_lib.h"/>
+            <File Name="src/ASF/avr32/drivers/pm/power_clocks_lib.c"/>
+            <File Name="src/ASF/avr32/drivers/pm/pm_uc3c.h"/>
+            <File Name="src/ASF/avr32/drivers/pm/pm_uc3c.c"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="usart">
+            <File Name="src/ASF/avr32/drivers/usart/usart.h"/>
+            <File Name="src/ASF/avr32/drivers/usart/usart.c"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="intc">
+            <File Name="src/ASF/avr32/drivers/intc/exception.S"/>
+            <File Name="src/ASF/avr32/drivers/intc/intc.c"/>
+            <File Name="src/ASF/avr32/drivers/intc/intc.h"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="usbc">
+            <File Name="src/ASF/avr32/drivers/usbc/usbc_otg.h" ExcludeProjConfig=""/>
+            <File Name="src/ASF/avr32/drivers/usbc/usbc_device.h" ExcludeProjConfig=""/>
+            <File Name="src/ASF/avr32/drivers/usbc/usbc_device.c" ExcludeProjConfig=""/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="flashc">
+            <File Name="src/ASF/avr32/drivers/flashc/flashc.h"/>
+            <File Name="src/ASF/avr32/drivers/flashc/flashc.c"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="gpio">
+            <File Name="src/ASF/avr32/drivers/gpio/gpio.h"/>
+            <File Name="src/ASF/avr32/drivers/gpio/gpio.c"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="canif">
+            <File Name="src/ASF/avr32/drivers/canif/canif.h"/>
+            <File Name="src/ASF/avr32/drivers/canif/canif.c"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="scif">
+            <File Name="src/ASF/avr32/drivers/scif/scif_uc3c.h"/>
+            <File Name="src/ASF/avr32/drivers/scif/scif_uc3c.c"/>
+          </VirtualDirectory>
+        </VirtualDirectory>
+        <VirtualDirectory Name="utils">
+          <VirtualDirectory Name="startup">
+            <File Name="src/ASF/avr32/utils/startup/startup_uc3.S"/>
+            <File Name="src/ASF/avr32/utils/startup/trampoline_uc3.S"/>
+            <File Name="src/ASF/avr32/utils/startup/trampoline_uc3.h"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="header_files">
+            <File Name="src/ASF/avr32/utils/header_files/uc3d_defines_fix.h"/>
+            <File Name="src/ASF/avr32/utils/header_files/uc3l3_l4_defines_fix.h"/>
+          </VirtualDirectory>
+          <VirtualDirectory Name="preprocessor">
+            <File Name="src/ASF/avr32/utils/preprocessor/preprocessor.h"/>
+            <File Name="src/ASF/avr32/utils/preprocessor/tpaste.h"/>
+            <File Name="src/ASF/avr32/utils/preprocessor/mrepeat.h"/>
+            <File Name="src/ASF/avr32/utils/preprocessor/stringz.h"/>
+          </VirtualDirectory>
+          <File Name="src/ASF/avr32/utils/compiler.h"/>
+          <File Name="src/ASF/avr32/utils/status_codes.h"/>
+        </VirtualDirectory>
+      </VirtualDirectory>
+    </VirtualDirectory>
+    <File Name="src/central_data.h"/>
+    <File Name="src/central_data.c"/>
+    <File Name="src/asf.h"/>
+    <VirtualDirectory Name="config">
+      <File Name="src/config/conf_usb.h"/>
+      <File Name="src/config/conf_clock.h"/>
+      <File Name="src/config/conf_board.h"/>
+      <File Name="src/config/conf_can.h"/>
+      <File Name="src/config/conf_sleepmgr.h"/>
+    </VirtualDirectory>
+    <File Name="src/main.c"/>
+    <VirtualDirectory Name="mavric">
+      <File Name="src/mavric/boardsupport.c"/>
+      <File Name="src/mavric/boardsupport.h"/>
+      <File Name="src/mavric/mavboot_config.h"/>
+    </VirtualDirectory>
+  </VirtualDirectory>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
+  <Settings Type="Executable">
+    <GlobalSettings>
+      <Compiler Options="" C_Options="" Assembler="">
+        <IncludePath Value="."/>
+      </Compiler>
+      <Linker Options="">
+        <LibraryPath Value="."/>
+      </Linker>
+      <ResourceCompiler Options=""/>
+    </GlobalSettings>
+    <Configuration Name="Debug" CompilerType="avr32-gcc" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-g;-Os;-Wall" C_Options="-Os -fdata-sections -ffunction-sections  -masm-addr-pseudos -g3 -Wall -mpart=uc3c1512c -c -std=gnu99 -fno-strict-aliasing -Wstrict-prototypes -Wmissing-prototypes -Werror-implicit-function-declaration -Wpointer-arith -mrelax -mno-cond-exec-before-reload -MD -MP -MF" Assembler="-Os -x assembler-with-cpp -c -mpart=uc3c1512c -mrelax -masm-addr-pseudos" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+        <IncludePath Value="src"/>
+        <IncludePath Value="src/mavric"/>
+        <IncludePath Value="src/config"/>
+        <IncludePath Value="src/project_config"/>
+        <IncludePath Value="src/ASF"/>
+        <IncludePath Value="src/ASF/avr32"/>
+        <IncludePath Value="src/ASF/avr32/services"/>
+        <IncludePath Value="src/ASF/avr32/services/fs"/>
+        <IncludePath Value="src/ASF/avr32/services/fs/fat"/>
+        <IncludePath Value="src/ASF/avr32/services/network"/>
+        <IncludePath Value="src/ASF/avr32/services/network/can"/>
+        <IncludePath Value="src/ASF/avr32/utils"/>
+        <IncludePath Value="src/ASF/avr32/utils/startup"/>
+        <IncludePath Value="src/ASF/avr32/utils/header_files"/>
+        <IncludePath Value="src/ASF/avr32/utils/make"/>
+        <IncludePath Value="src/ASF/avr32/utils/libs"/>
+        <IncludePath Value="src/ASF/avr32/utils/libs/dsplib"/>
+        <IncludePath Value="src/ASF/avr32/utils/libs/dsplib/include"/>
+        <IncludePath Value="src/ASF/avr32/utils/libs/dsplib/at32ucr3fp"/>
+        <IncludePath Value="src/ASF/avr32/utils/libs/dsplib/at32ucr3fp/gcc"/>
+        <IncludePath Value="src/ASF/avr32/utils/preprocessor"/>
+        <IncludePath Value="src/ASF/avr32/drivers"/>
+        <IncludePath Value="src/ASF/avr32/drivers/pm"/>
+        <IncludePath Value="src/ASF/avr32/drivers/adcifa"/>
+        <IncludePath Value="src/ASF/avr32/drivers/usart"/>
+        <IncludePath Value="src/ASF/avr32/drivers/twim"/>
+        <IncludePath Value="src/ASF/avr32/drivers/intc"/>
+        <IncludePath Value="src/ASF/avr32/drivers/acifa"/>
+        <IncludePath Value="src/ASF/avr32/drivers/iisc"/>
+        <IncludePath Value="src/ASF/avr32/drivers/ast"/>
+        <IncludePath Value="src/ASF/avr32/drivers/wdt"/>
+        <IncludePath Value="src/ASF/avr32/drivers/pevc"/>
+        <IncludePath Value="src/ASF/avr32/drivers/mdma"/>
+        <IncludePath Value="src/ASF/avr32/drivers/tc"/>
+        <IncludePath Value="src/ASF/avr32/drivers/spi"/>
+        <IncludePath Value="src/ASF/avr32/drivers/usbc"/>
+        <IncludePath Value="src/ASF/avr32/drivers/pdca"/>
+        <IncludePath Value="src/ASF/avr32/drivers/cpu"/>
+        <IncludePath Value="src/ASF/avr32/drivers/cpu/cycle_counter"/>
+        <IncludePath Value="src/ASF/avr32/drivers/eic"/>
+        <IncludePath Value="src/ASF/avr32/drivers/dacifb"/>
+        <IncludePath Value="src/ASF/avr32/drivers/pwm"/>
+        <IncludePath Value="src/ASF/avr32/drivers/flashc"/>
+        <IncludePath Value="src/ASF/avr32/drivers/gpio"/>
+        <IncludePath Value="src/ASF/avr32/drivers/twis"/>
+        <IncludePath Value="src/ASF/avr32/drivers/canif"/>
+        <IncludePath Value="src/ASF/avr32/drivers/scif"/>
+        <IncludePath Value="src/ASF/avr32/drivers/usart"/>
+        <IncludePath Value="src/ASF/avr32/drivers/usbc"/>
+        <IncludePath Value="src/ASF/avr32/components"/>
+        <IncludePath Value="src/ASF/avr32/components/memory"/>
+        <IncludePath Value="src/ASF/avr32/components/memory/sd_mmc"/>
+        <IncludePath Value="src/ASF/avr32/components/memory/sd_mmc/sd_mmc_spi"/>
+        <IncludePath Value="src/ASF/common"/>
+        <IncludePath Value="src/ASF/common/services"/>
+        <IncludePath Value="src/ASF/common/services/usb"/>
+        <IncludePath Value="src/ASF/common/services/usb/udc"/>
+        <IncludePath Value="src/ASF/common/services/usb/class"/>
+        <IncludePath Value="src/ASF/common/services/usb/class/cdc"/>
+        <IncludePath Value="src/ASF/common/services/usb/class/cdc/device"/>
+        <IncludePath Value="src/ASF/common/services/clock"/>
+        <IncludePath Value="src/ASF/common/services/clock/uc3c"/>
+        <IncludePath Value="src/ASF/common/services/fifo"/>
+        <IncludePath Value="src/ASF/common/services/ioport"/>
+        <IncludePath Value="src/ASF/common/services/ioport/uc3"/>
+        <IncludePath Value="src/ASF/common/services/storage"/>
+        <IncludePath Value="src/ASF/common/services/storage/ctrl_access"/>
+        <IncludePath Value="src/ASF/common/services/delay"/>
+        <IncludePath Value="src/ASF/common/services/spi"/>
+        <IncludePath Value="src/ASF/common/services/spi/uc3_spi"/>
+        <IncludePath Value="src/ASF/common/services/cpu"/>
+        <IncludePath Value="src/ASF/common/services/twi"/>
+        <IncludePath Value="src/ASF/common/services/twi/uc3_twim"/>
+        <IncludePath Value="src/ASF/common/services/sleepmgr"/>
+        <IncludePath Value="src/ASF/common/services/sleepmgr/uc3"/>
+        <IncludePath Value="src/ASF/common/utils"/>
+        <IncludePath Value="src/ASF/common/utils/interrupt"/>
+        <IncludePath Value="src/ASF/common/utils/stdio"/>
+        <IncludePath Value="src/ASF/common/utils/stdio/stdio_usb"/>
+        <IncludePath Value="src/ASF/common/components"/>
+        <IncludePath Value="src/ASF/common/components/memory"/>
+        <IncludePath Value="src/ASF/common/components/memory/sd_mmc"/>
+        <IncludePath Value="src/ASF/common/boards"/>
+        <IncludePath Value="src/ASF/common/boards/user_board"/>
+        <IncludePath Value="Library/"/>
+        <IncludePath Value="Library/mavlink"/>
+        <IncludePath Value="Library/runtime"/>
+        <IncludePath Value="Library/util"/>
+        <IncludePath Value="Library/tests"/>
+        <IncludePath Value="Library/sensing"/>
+        <IncludePath Value="Library/hal"/>
+        <IncludePath Value="Library/hal/boards"/>
+        <IncludePath Value="Library/hal/drivers"/>
+        <IncludePath Value="Library/control"/>
+        <IncludePath Value="Library/communication"/>
+        <Preprocessor Value="ACCESS_MEM_TO_RAM_ENABLED"/>
+        <Preprocessor Value="UDD_ENABLE"/>
+      </Compiler>
+      <Linker Options="-nostartfiles -Wl,-Map=&quot;$(ProjectName).map&quot; -Wl,--start-group -lm  -Wl,--end-group -Wl,--gc-sections --rodata-writable -Wl,--direct-data -mpart=uc3c1512c -Wl,--relax -Wl,-e,_trampoline " Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/../$(ProjectName).elf" IntermediateDirectory="./Debug_Linux/obj" Command="bash ./dfu_program at32uc3c1512 $(ProjectName).hex" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)/.." PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild>
+        <Command Enabled="yes">avr32-objcopy -O ihex -R .eeprom -R .fuse -R .lock -R .signature  $(IntermediateDirectory)/../$(ProjectName).elf $(IntermediateDirectory)/../$(ProjectName).hex</Command>
+        <Command Enabled="yes">avr32-size $(IntermediateDirectory)/../$(ProjectName).elf</Command>
+        <Command Enabled="yes"/>
+      </PostBuild>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+    <Configuration Name="Release" CompilerType="gnu gcc" DebuggerType="GNU gdb debugger" Type="" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
+      <Compiler Options="-O2;-Wall" C_Options="-O2;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+        <IncludePath Value="."/>
+        <Preprocessor Value="NDEBUG"/>
+      </Compiler>
+      <Linker Options="" Required="yes"/>
+      <ResourceCompiler Options="" Required="no"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Release" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
+        <![CDATA[]]>
+      </Environment>
+      <Debugger IsRemote="no" RemoteHostName="" RemoteHostPort="" DebuggerPath="" IsExtended="no">
+        <DebuggerSearchPaths/>
+        <PostConnectCommands/>
+        <StartupCommands/>
+      </Debugger>
+      <PreBuild/>
+      <PostBuild/>
+      <CustomBuild Enabled="no">
+        <RebuildCommand/>
+        <CleanCommand/>
+        <BuildCommand/>
+        <PreprocessFileCommand/>
+        <SingleFileCommand/>
+        <MakefileGenerationCommand/>
+        <ThirdPartyToolName>None</ThirdPartyToolName>
+        <WorkingDirectory/>
+      </CustomBuild>
+      <AdditionalRules>
+        <CustomPostBuild/>
+        <CustomPreBuild/>
+      </AdditionalRules>
+      <Completion EnableCpp11="no" EnableCpp14="no">
+        <ClangCmpFlagsC/>
+        <ClangCmpFlags/>
+        <ClangPP/>
+        <SearchPaths/>
+      </Completion>
+    </Configuration>
+  </Settings>
+</CodeLite_Project>
