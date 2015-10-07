@@ -1,0 +1,110 @@
+<?xml version='1.0'?>
+<mavlink>
+        <include>common.xml</include>
+
+     <enums>
+          <enum name="BOOTLOADER_COMMANDS">
+               <description>Bootloader/debug command definitions</description>
+               <entry value="1" name="BOOT_INITIATE_SESSION"><description>Activates bootloader after power-up</description></entry>
+               <entry value="2" name="BOOT_RESET"><description>Reset microcontroller</description></entry>
+               <entry value="3" name="BOOT_STATE_RESET"><description>Bootloader returns to default state</description></entry>
+               <entry value="4" name="BOOT_GET_PROCESSOR_INFORMATION"><description>Request all processor information. Response: multiple messages with information (see following defintions)</description></entry>
+               <entry value="5" name="BOOT_PROCESSOR_MODEL"><description>Response: BOOTLOADER_CMD message with 32bit processor model identifier. Optional: BOOTLOADER_DATA with description string</description></entry>
+               <entry value="6" name="BOOT_ARCHITECTURE"><description>Response: BOOTLOADER_DATA with Architecture description string</description></entry>
+               <entry value="7" name="BOOT_PAGE_SIZE"><description>Response: BOOTLOADER_CMD message with  param_length = processor page size in bytes</description></entry>
+               <entry value="8" name="BOOT_PROCESSOR_ID"><description>Response: BOOTLOADER_DATA with full unique processor ID (120 bits for AVR32)</description></entry>
+               <entry value="9" name="BOOT_TARGET_VOLTAGE"><description>Response: BOOTLOADER_CMD message with  param_address = voltage in millivolts (optional)</description></entry>
+               <entry value="10" name="BOOT_FLASH_ADDRESS"><description>Response: BOOTLOADER_CMD message with  param_address = start address of flash,  param_length = flash memory size in bytes</description></entry>
+               <entry value="11" name="BOOT_RAM_ADDRESS"><description>Response: BOOTLOADER_CMD message with  param_address = start address of RAM, param_length = RAM memory size in bytes</description></entry>
+               <entry value="12" name="BOOT_PROTECTED_BOOT_AREA"><description>Response: BOOTLOADER_CMD message with  param_address = first address after Bootloader, param_length=size of bootloader</description></entry>
+               <entry value="13" name="BOOT_USERPAGE_ADDRESS"><description>Response: BOOTLOADER_CMD message with  param_address = address of user page, param_length=size of userpage area</description></entry>
+               <entry value="14" name="BOOT_BOARD_NAME"><description>Response: BOOTLOADER_DATA message with string of board name (user definable)</description></entry>
+
+               <entry value="16" name="BOOT_START_APPLICATION"><description>leaves bootloader and starts user application</description></entry>
+               <entry value="17" name="BOOT_START_AT_ADDRESS"><description>start execution at address in param_address</description></entry>
+               <entry value="18" name="BOOT_ERASE_FLASH"><description>erase flash starting from param_address to param_address+param_length (rounded to pages)</description></entry>
+               <entry value="19" name="BOOT_ERASE_USERPAGE"><description>erase user page or internal eeprom</description></entry>
+               <entry value="20" name="BOOT_START_REPROGRAM"><description>initiates flash upload session</description></entry>
+               <entry value="21" name="BOOT_END_REPROGRAM"><description>ends flash upload session</description></entry>
+               <entry value="22" name="BOOT_WRITE_TO_BUFFER"><description>BOOTLOADER_DATA: write data to internal page buffer</description></entry>
+               <entry value="23" name="BOOT_WRITE_BUFFER_TO_FLASH"><description>BOOTLOADER_CMD: write page buffer contents to flash page at given address. Returns ACK with address, and length=CRC16 of written data.</description></entry>
+               <entry value="24" name="BOOT_WRITE_BUFFER_TO_USERPAGE"><description>BOOTLOADER_CMD: write page buffer contents to user page or internal eeprom at relative address</description></entry>
+               <entry value="25" name="BOOT_READ_MEMORY"><description>Request data at given memory address with given length</description></entry>
+               <entry value="26" name="BOOT_VERIFY_MEMORY"><description>Request CRC16 of data at given memory address and length. Returns ACK with address, and length=CRC16 of written data.</description></entry>
+               <entry value="27" name="BOOT_READ_FUSES"><description>Response: BOOTLOADER_CMD with param_address = fuse bytes</description></entry>
+               <entry value="28" name="BOOT_WRITE_FUSES"><description>Set fuse bytes to value in param_address</description></entry>
+               <entry value="29" name="BOOT_READ_REGISTERS"><description>Response: BOOTLOADER_DATA with register dump</description></entry>
+               <entry value="30" name="BOOT_READ_STACKPOINTER"><description>Response: BOOTLOADER_CMD with stackpointer value in param_address</description></entry>
+               <entry value="31" name="BOOT_READ_STACK"><description>Response: BOOTLOADER_DATA with stack dump of param_length</description></entry>
+               <entry value="32" name="BOOT_DEBUG_PAUSE"><description>pause execution and enter debug mode</description></entry>
+               <entry value="33" name="BOOT_DEBUG_CONTINUE"><description>continue execution</description></entry>
+
+               <entry value="128" name="ACK_FLAG"><description></description></entry>
+
+          </enum>
+     </enums>
+     <messages>
+          <message id="180" name="CAN_PACKET">
+               <description>Encapsulation of individual CAN packets to tunnel through other streams</description>
+               <field type="uint32_t" name="time_boot_ms">Timestamp (milliseconds since system boot)</field>
+               <field type="uint8_t" name="bus_id">identifier of the can bus</field>
+               <field type="uint32_t" name="can_id">CAN arbitration field (11 or 29 bits)</field>
+               <field type="uint8_t" name="frame_type">0: standard frame; 1: remote frame; 2: error frame, 3: overload frame; Extended: 16: standard frame; 17: remote frame; 18: error frame, 19: overload frame</field>
+               <field type="uint8_t" name="dlc">data length</field>
+               <field type="uint8_t[8]" name="values">raw sample values</field>
+          </message>
+
+          <message id="181" name="RAW_DATA_STREAM_8">
+               <description>Raw data stream (8-bit) or multi-packet arrays</description>
+               <field type="uint32_t" name="time_boot_ms">Timestamp (milliseconds since system boot)</field>
+               <field type="uint8_t" name="stream_id">Stream ID</field>
+               <field type="uint8_t" name="packets_per_block">Number of packets per block (0 if continuous stream)</field>
+               <field type="uint8_t" name="packet_id">packet counter</field>
+               <field type="uint8_t" name="sample_count">Number of valid samples in this packet</field>
+               <field type="uint8_t[64]" name="values">raw sample values</field>
+          </message>
+
+          <message id="182" name="RAW_DATA_STREAM_16">
+               <description>Raw data stream (16-bit) or multi-packet arrays</description>
+               <field type="uint32_t" name="time_boot_ms">Timestamp (milliseconds since system boot)</field>
+               <field type="uint8_t" name="stream_id">Stream ID</field>
+               <field type="uint8_t" name="packets_per_block">Number of packets per block (0 if continuous stream)</field>
+               <field type="uint8_t" name="packet_id">packet counter</field>
+               <field type="uint8_t" name="sample_count">Number of valid samples in this packet</field>
+               <field type="int16_t[64]" name="values">raw sample values</field>
+          </message>
+          <message id="183" name="RAW_DATA_STREAM_FLOAT">
+               <description>Raw data stream (32-bit float) or multi-packet arrays</description>
+               <field type="uint32_t" name="time_boot_ms">Timestamp (milliseconds since system boot)</field>
+               <field type="uint8_t" name="stream_id">Stream ID</field>
+               <field type="uint8_t" name="packets_per_block">Number of packets per block (0 if continuous stream)</field>
+               <field type="uint8_t" name="packet_id">packet counter</field>
+               <field type="uint8_t" name="sample_count">Number of valid samples in this packet</field>
+               <field type="float[32]" name="values">raw sample values</field>
+          </message>
+
+          <message id="200" name="BOOTLOADER_CMD">
+               <description>Additional information on existing messages and commands</description>
+               <field type="uint8_t" name="target_system">System which should execute the command</field>
+               <field type="uint8_t" name="target_component">Component which should execute the command, 0 for all components</field>
+               <field type="uint32_t" name="session_message_counter">unique session handle negotiated when entering boot mode. Incremented by master with each message. Slave returns the last received and processed message as acknowledgement.</field>
+               <field type="uint8_t" name="command">Command ID, as defined by BOOTLOADER_CMD enum.</field>
+               <field type="uint8_t" name="error_id">Error code in response to previous command or transfer as defined by BOOTLOADER_ERROR enum.</field>
+               <field type="uint32_t" name="param_address">Command parameter 1 or memory address depending on command</field>
+               <field type="uint32_t" name="param_length"> Command parameter 2 or transfer length depending on command</field>
+          </message>
+
+          <message id="201" name="BOOTLOADER_DATA">
+               <description>Bootloader memory transfer (reading or writing) for flash or RAM transfers.</description>
+               <field type="uint8_t" name="target_system">System which should execute the command</field>
+               <field type="uint8_t" name="target_component">Component which should execute the command, 0 for all components</field>
+               <field type="uint32_t" name="session_message_counter">unique session handle negotiated when entering boot mode. Incremented by master with each message. Slave returns the last received and processed message as acknowledgement.</field>
+               <field type="uint8_t" name="command">Command ID, as defined by BOOTLOADER_CMD enum.</field>
+               <field type="uint32_t" name="base_address">32bit memory base address to write to / read from. </field>
+               <field type="uint8_t" name="data_length">length of data block (number of valid bytes in data)</field>
+               <field type="uint8_t[32]" name="data">raw data for memory transfer</field>
+
+          </message>
+
+     </messages>
+</mavlink>
